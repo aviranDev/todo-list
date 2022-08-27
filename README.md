@@ -1,4 +1,6 @@
-# Simon Game Mobile Application
+# Todolist Web Application
+
+## The Site: https://heroic-unicorn-3ffc9d.netlify.app/
 
 ![display](public/todo-image.png)
 
