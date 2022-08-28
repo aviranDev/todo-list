@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { v4 as uuidv4 } from 'uuid';
 import useForm from "../hooks/useForm";
 import CustomButton from "../Custom/CustomButton";
@@ -13,7 +13,6 @@ const credentials = {
 
 const TodoForm = ({ addTodo }) => {
   const { state, setState, handleChange } = useForm(credentials);
-  const countRef = useRef(0);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,8 +20,6 @@ const TodoForm = ({ addTodo }) => {
       addTodo({ ...state, id: uuidv4() })
       setState({ ...state, task: "" })
     };
-    countRef.current++;
-    console.log(countRef)
   };
   return (
     <Form onSubmit={handleSubmit}>
